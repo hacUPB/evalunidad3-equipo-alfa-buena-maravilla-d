@@ -1,0 +1,6 @@
+gcc -c -g -Wall main.c -o main.o
+gcc -c -g -Wall IStrategy.c -o IStrategy.o
+gcc -c -g -Wall ConcreteStrategyA.c -o ConcreteStrategyA.o
+gcc -c -g -Wall Context.c -o Context.o
+gcc -c -g -Wall ConcreteStrategyB.c -o ConcreteStrategyB.o
+gcc -g -Wall main.o IStrategy.o Context.o ConcreteStrategyB.o ConcreteStrategyA.o -o Ejecutable
