@@ -8,7 +8,7 @@
 typedef struct 
 {
     //Le doy el interfaz y el nombre de la estrategia que voy a utilizar
-    Interfaz estrategiaB;
+    Interfaz estratB;
 
 }estrategiaB;   //Estrategia B es el nombre de nuestra nueva estructura
 

@@ -23,10 +23,11 @@ void algoritmoA(void * nombre)
     printf("Contexto: Imprimimos los datos tal cual nos fueron dados:\n");
 
     //Creamos un puntero que reserve un espacio para la lista
-    char *lista = malloc(sizeof(char[15]));
+    char *lista = malloc(sizeof(char)*15);
 
     //Copiamos la lista que viene parametrizada(nombre) a lista
-    strcpy("%s", lista);
+    strcpy(lista,(char*)nombre);
+    printf("%s", lista);
 
     //Luego liberamos 
     free(lista);

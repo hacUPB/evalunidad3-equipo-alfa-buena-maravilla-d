@@ -9,7 +9,7 @@ estrategiaB *nuevaestrategiaB()
     return (estrategiaB*)malloc(sizeof(estrategiaB));
 }
 
-void algortimoB(char * nombre)
+void algortimoB(void * nombre)
 {
     //Imprimimos un mensaje parecido al de C#
     printf("Contexto: Imprimimos los datos pero invertidos:\n");
@@ -34,7 +34,6 @@ void Reverse (char * lista)
     ptr2 = lista + strlen(lista) - 1;
 
     char NInver = *ptr2;
-    printf("\n");
     do
     {
         //Si el invertido es diferente de \0
@@ -63,7 +62,7 @@ void ctorEstrategiaB(estrategiaB *this)
     ctorInterfaz((Interfaz*)this);
 
     //Luego le enviamos la funcion algoritmo B al dato algoritmo que es un tipo de dato algortimo que creamos en el interfaz
-    this->estrategiaB.algoritmo = (Interfaz*) algortimoB;
+    this->estratB.algoritmo =  algortimoB;
 }
 //destructor
 void dtorEstrategiaB(estrategiaB *this)

@@ -17,8 +17,6 @@ void ctorContexto(Contexto * this, void * estrategia)
     //Entramos al nombre de nuestra estructura y alacenamos char[15]
     this->nombre = malloc(sizeof(char[15]));
     
-    //Le pedimos que ingrese una lista
-    printf("Porfavor ingrese la lista");
     //Creamos la lista y la scaneamos
     char name[15];
     scanf("%s",name); 
