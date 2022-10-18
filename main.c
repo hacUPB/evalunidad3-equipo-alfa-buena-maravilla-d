@@ -23,11 +23,11 @@ int main (void)
     Contexto* EnmainContexto = nuevocontexto();
     ctorContexto(EnmainContexto, EstraA);
 
-    printf("Arreglo normal");
+    printf("Arreglo normal\n");
     Dosome(EnmainContexto);
     printf("\n");
 
-    printf("Arreglo Inverso");
+    printf("Arreglo Inverso\n");
     SeteoEstrategia(EnmainContexto, EstraB);
     Dosome(EnmainContexto);
 
