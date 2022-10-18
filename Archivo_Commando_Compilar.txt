@@ -1,6 +1,6 @@
 gcc -c -g -Wall main.c -o main.o
-gcc -c -g -Wall IStrategy.c -o IStrategy.o
-gcc -c -g -Wall ConcreteStrategyA.c -o ConcreteStrategyA.o
-gcc -c -g -Wall Context.c -o Context.o
-gcc -c -g -Wall ConcreteStrategyB.c -o ConcreteStrategyB.o
-gcc -g -Wall main.o IStrategy.o Context.o ConcreteStrategyB.o ConcreteStrategyA.o -o Ejecutable
+gcc -c -g -Wall Interfaz.c -o Interfaz.o
+gcc -c -g -Wall cestrategiaA.c -o cestrategiaA.o
+gcc -c -g -Wall cestrategiaB.c -o cestrategiaB.o
+gcc -c -g -Wall Contexto.c -o Contexto.o
+gcc -g -Wall main.o Interfaz.c Contexto.o cestrategiaB.o cestrategiaA.c -o Ejecutable

@@ -2,55 +2,40 @@
 #include <stdlib.h>
 #include <string.h>
 
-//Heradamos todas las clases
-#include "Context.h"
-#include "ConcreteStrategyA.h"
-#include "ConcreteStrategyB.h"
-#include "IStrategy.h"
+//"Heredamos" todos los .h que son "clases"
+#include "cestrategiaA.h"
+#include "cestrategiaB.h"
+#include "Contexto.h"
+#include "Interfaz.h"
 
-
-//Luego creamos el main
+//Ahora creamos el main, int para contro de errores
 int main (void)
 {
-    //Esta instanciando las clases adentro del main
-    IStrategy* Master = New_IStrategy();
-    //Llama los constructores para master
-    Contructor_IStrategy(Master);
+    Interfaz* enmain = NuevaEstrategia();
+    ctorInterfaz(enmain);
 
-    //Instancia la estrategia A
-    ConcreteStrategyA* stratA = New_ConcreteStrategyA();
-    //Construye la estrategia A
-    Contructor_ConcreteStrategyA(stratA);
+    estrategiaA* EstraA = nuevaestrategiaA();
+    ctorEstrategiaA(EstraA);
 
-    //Instancia la estrategia B
-    ConcreteStrategyB* stratB = New_ConcreteStrategyB();
-    //Construye la estrategia B
-    Contructor_ConcreteStrategyB(stratB);
+    estrategiaB* EstraB = nuevaestrategiaB();
+    ctorEstrategiaB(EstraB);
 
-    //Instancia el contexto
-    Context *Master_Context = New_Context();
-    //Construye el contexto
-    Contructor_Context(Master_Context,stratA);
+    Contexto* EnmainContexto = nuevocontexto();
+    ctorContexto(EnmainContexto, EstraA);
 
-    //Imprime el primer mensaje
-    printf("Client: Strategy is set to normal sorting.");
-    //Luego le manda a hacer algo el parametro Master_context
-    Dosomething(Master_Context);
-    //Separamos las lineas
+    printf("Arreglo normal");
+    Dosome(EnmainContexto);
     printf("\n");
 
-    //Imprimimos el segundo mensaje
-    printf("Client: Strategy is set to reverse sorting.");
-    //Seteamos la estrategia B y le mandamos los parametros que necesita
-    SetStrat(Master_Context,stratB);
+    printf("Arreglo Inverso");
+    SeteoEstrategia(EnmainContexto, EstraB);
+    Dosome(EnmainContexto);
 
-    Dosomething(Master_Context);
-
-    Destructor_Context(Master_Context);
-    free(Master_Context);
-    free(stratA);
-    free(stratB);
-    free(Master);
-
-    return 0;    
+    dtorContexto(EnmainContexto);
+    free(EstraA);
+    free(EstraB);
+    free(EnmainContexto);
+    free(enmain);
+    
+    return 0;
 }
