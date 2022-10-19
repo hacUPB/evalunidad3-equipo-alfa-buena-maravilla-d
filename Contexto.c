@@ -19,9 +19,9 @@ void ctorContexto(Contexto * this, void * estrategia)
     
     //Creamos la lista y la scaneamos
     char name[15];
-    printf("Porfavor ingrese la lista:\n");
+    
     scanf("%s",name); 
-
+    printf("Porfavor ingrese la lista:\n");
     //Le copiamos al nombre, la lista ingresada
     strcpy(this->nombre,name);
 }
