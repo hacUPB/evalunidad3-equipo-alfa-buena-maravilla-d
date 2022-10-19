@@ -3,4 +3,4 @@ gcc -c -g -Wall Interfaz.c -o Interfaz.o
 gcc -c -g -Wall cestrategiaA.c -o cestrategiaA.o
 gcc -c -g -Wall cestrategiaB.c -o cestrategiaB.o
 gcc -c -g -Wall Contexto.c -o Contexto.o
-gcc -g -Wall main.o Interfaz.c Contexto.o cestrategiaB.o cestrategiaA.c -o Ejecutable
+gcc -g -Wall main.o Interfaz.c Contexto.o cestrategiaB.o cestrategiaA.o -o Ejecutable

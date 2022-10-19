@@ -11,6 +11,7 @@
 //Ahora creamos el main, int para contro de errores
 int main (void)
 {
+
     Interfaz* enmain = NuevaEstrategia();
     ctorInterfaz(enmain);
 

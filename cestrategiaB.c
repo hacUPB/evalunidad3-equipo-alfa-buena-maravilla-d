@@ -12,7 +12,7 @@ estrategiaB *nuevaestrategiaB()
 void algortimoB(void * nombre)
 {
     //Imprimimos un mensaje parecido al de C#
-    printf("Contexto: Imprimimos los datos pero invertidos:\n");
+    printf("Contexto: Imprimimos los datos pero invertidos:");
 
     //Creamos un puntero que reserve un espacio para la lista
     char* lista = malloc(sizeof(char[15]));
@@ -53,6 +53,7 @@ void Reverse (char * lista)
         }
         //El ciclo termina cuando ptr2(el final de la cadena) es menor que ptr1(EL inicio de la cadena)
     } while (ptr2 >= ptr1);
+    printf("\n");
 }
 
 //constructor
